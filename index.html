@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talvik Båtforening</title>
+    <!-- Laykajenta Design favicon
+        Z -->
+    <link
+      rel="shortcut icon"
+      href="Laykajenta Design.jpg"
+      type="image/x-icon"
+    />
+    <!-- Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+<div class="nav-wrapper">
+  <div class="menu-icon" onclick="toggleMenu()">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+</div>
+<nav id="nav">
+    <ul>
+        <li><a href="#section-1" onclick="hideMenu()">Hjem</a></li>
+        <li><a href="#section-2" onclick="hideMenu()">Historie</a></li>
+        <li><a href="#section-3" onclick="hideMenu()">Båtplasser</a></li>
+        <li><a href="#section-4" onclick="hideMenu()">Galleri</a></li>
+        <li><a href="#section-5" onclick="hideMenu()">Kontakt</a></li>
+    </ul>
+</nav>
+</div>
+   
+  <!-- slutt navbar -->
+    <main>
+      <section id="section-1">
+        <header class="header">
+          <h1>Talvik Båtforening</h1>
+          <div class="social-media-icons">
+            <a
+              href="https://www.facebook.com/groups/763919026993220"
+              class="fa fa-facebook"
+            ></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+          </div>
+        </header>
+      </section>
+      <!--Section 2  -->
+
+      <section id="section-2">
+        
+          <h2>Historie</h2>
+        
+        <img src="./Bilder/talvik_bf.jpg" alt="Talvik Båthavn" class="main-image" />
+      </section>
+      <!-- section 3 Båtplasser -->
+      <section id="section-3">
+        <h2>Båtplasser kommer snart</h2>
+        <div class="batplass"><article>
+            <!-- listene lages som tabeller -->
+            <h3>Liste over båtplasser</h3>
+            <ul><li>Plass 1</li></ul>
+            <h3>Venteliste</h3>
+            <ul><li>Venteplass 1</li></ul>
+            <h3>Melde ønske om båtplass</h3>
+            <!--Her skal det være et skjema som sendes inn  -->
+            <a href="mailto:example@example.com">Send e-post</a>
+        </article></div>
+      </section>
+      <!-- section 4 Galleri -->
+      <section id="section-4">
+        <h2>Galleri</h2>
+        <div class="image-container">
+          <img src="./Bilder/redningselskapet.jpg" alt="Rdningselskap" class="small-image">
+            <img src="./Bilder/redningselskapet.jpg" alt="Rdningselskap" class="small-image">
+            <img src="./Bilder/redningselskapet.jpg" alt="Rdningselskap" class="small-image">
+        </div>
+      </section>
+      <!-- section 5 kontakt -->
+       <section id="section-5">
+        <h3>Kontakt oss</h3>
+       </section>
+     
+      <!-- Footer -->
+      <footer class="footer">
+        <small
+          ><img
+            src="./Bilder/Laykajenta Design.jpg"
+            alt="Logo Laykajenta Design"
+            width="30px"
+          />&copy; Laykajenta design. All rights reserved</small
+        >
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
