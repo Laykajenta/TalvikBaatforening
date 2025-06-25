@@ -1,4 +1,22 @@
-
+// allow for selceting of images to trigger modal view
+const items = document.querySelectorAll('.grid>div');
+items.forEach(item => {
+    item.title = 'click to enlarge';
+    item.addEventListener('click', () => {
+        const imgScr = item.querySelector('img').src;
+        //crate the modal div
+        const modal = document.createElement('div');
+        modal.classList.add('modal');
+        //create the image element
+        const imgElement = document.createElement('img');
+        imgElement.src = imgScr;
+        imgElement.alt = 'Enlarged Abstract image';
+        //append the image to the modal
+        modal.appendChild(imgElement);
+        //append the modal to the body
+        document.body.appendChild(modal);
+    })
+});
 // lage en funksjon som sjekker om siden er scollet og tilpasse logo størrelse
 
 function checkScroll() {
