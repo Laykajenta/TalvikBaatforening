@@ -126,13 +126,30 @@ social-media-icons a {
 
 /* MediaQueries ------------- */
 /* Tablet  */
-@media screen and (max-width: 1025px) {
+@media  (max-width: 1025px) {
   .nav-left h1 {
     font-size: 1.5rem !important;
   }
+  .grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, minmax(150px, auto));
+    padding: 5px;
+    
+}
+  .grid > div {
+    grid-area: auto;
+  }
+ 
+}
+/* horizontal orientation and typical landscape widhts */
+@media(orientation: landscape) and (max-width: 1024px) {
+  img{
+    max-height: 90vh;
+    margin: auto;
+  }
 }
 /* smartphone vertical */
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   nav {
     flex-direction: column;
     align-items: flex-start;
