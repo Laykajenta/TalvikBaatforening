@@ -1,92 +1,147 @@
-body{
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background: linear-gradient(
-        90deg,
-        hsla(203, 90%, 92%, 1) 0%,
-        hsla(203, 89%, 71%, 1) 50%,
-        hsla(213, 88%, 42%, 1) 100%,
-        hsla(0, 0%, 96%, 1) 100%
-      );
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    line-height: 1.6;
-
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    90deg,
+    hsla(203, 90%, 92%, 1) 0%,
+    hsla(203, 89%, 71%, 1) 50%,
+    hsla(213, 88%, 42%, 1) 100%,
+    hsla(0, 0%, 96%, 1) 100%
+  );
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  line-height: 1.6;
 }
 /* Stickybar styles */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    padding: 5px 5%;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    height: 80px;
-    background: linear-gradient(
-        90deg,
-        hsla(203, 90%, 92%, 1) 0%,
-        hsla(203, 89%, 71%, 1) 50%,
-        hsla(213, 88%, 42%, 1) 100%,
-        hsla(0, 0%, 96%, 1) 100%
-      );
-   
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 80px;
+
+  background: linear-gradient(
+    90deg,
+    hsla(203, 90%, 92%, 1) 0%,
+    hsla(203, 89%, 71%, 1) 50%,
+    hsla(213, 88%, 42%, 1) 100%,
+    hsla(0, 0%, 96%, 1) 100%
+  );
 }
-.nav-left h1{
-    font-size: 3rem;
+.nav-left h1 {
+  font-size: 3rem;
 }
 
-#navbar.scrolled .nav-left h1{
-    font-size: 1.5rem;
-    transition: font-size 0.3s ease;
+#navbar.scrolled .nav-left h1 {
+  font-size: 1.5rem;
+  transition: font-size 0.3s ease;
 }
 
-.nav-right a{
-    margin-left: 20px;
-    color: hsla(0, 1%, 13%, 0.88);
+.nav-right a {
+  margin-left: 20px;
+  color: hsla(0, 1%, 13%, 0.88);
+  text-decoration: none;
 }
-.nav-right a:hover{
-    color: hsla(0, 13%, 16%, 0.428);
+.nav-right a:hover {
+  color: hsla(0, 13%, 16%, 0.428);
+}
+/* main content */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 180px);
+  grid-gap: 5px;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 1600px;
+  border-radius: 5px;
+ 
 }
 
-footer{
-    color: rgb(37, 35, 35);
-    padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
+.item1 {
+  grid-area: 1 / 1 / 4 / 2;
 }
-social-media-icons{
-    margin-top: 10px;
+.item2 {
+  grid-area: 1 / 2 / 3 / 4;
+}
+.item3 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.item4 {
+  grid-area: 4 / 1 / 5 / 3;
+}
+.item5 {
+  grid-area: 3 / 3 / 5 / 4;
+}
+.item6 {
+  grid-area: 1 / 4 / 3 / 6;
+}
+.item7 {
+  grid-area: 3 / 4 / 5 / 5;
+}
+.item8 {
+  grid-area: 3 / 5 / 4 / 6;
+}
+.item9 {
+  grid-area: 1 / 6 / 4 / 7;
+}
+.item10 {
+  grid-area: 4 / 4 / 5 / 7;
 }
 
-social-media-icons a{
-    margin: 0 10px;
-    color: rgb(34, 25, 132);
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  border: 1px solid hsla(203, 90%, 92%, 1);
+  border-radius: 5px;
+
+}
+footer {
+  color: rgb(37, 35, 35);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+#logo{
+  max-width: 30px;
+}
+social-media-icons {
+  margin-top: 10px;
+}
+
+social-media-icons a {
+  margin: 0 10px;
+  color: rgb(34, 25, 132);
 }
 
 /* MediaQueries ------------- */
 /* Tablet  */
-@media screen and (max-width:1025px){
-  .nav-left h1{
+@media screen and (max-width: 1025px) {
+  .nav-left h1 {
     font-size: 1.5rem !important;
   }
-  
 }
 /* smartphone vertical */
-@media screen and (max-width:600px){
-  nav{
+@media screen and (max-width: 600px) {
+  nav {
     flex-direction: column;
     align-items: flex-start;
     height: auto;
     padding: 10px 5%;
   }
 
-  .nav-right a{
+  .nav-right a {
     margin-left: unset;
     margin-right: 20px;
   }
-    
 }
