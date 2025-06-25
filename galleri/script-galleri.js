@@ -14,7 +14,13 @@ items.forEach(item => {
         //append the image to the modal
         modal.appendChild(imgElement);
         //append the modal to the body
-        document.body.appendChild(modal);
+        document.body.appendChild(modal);   
+        //add event listener to close the modal on click
+        modal.addEventListener('click', () => {
+            document.body.removeChild(modal);
+        });
+
+
     })
 });
 // lage en funksjon som sjekker om siden er scollet og tilpasse logo størrelse
