@@ -1,3 +1,18 @@
+//spinner for loading
+// function to generate random color
+function getRandomColor() { 
+    return '#' + Math.random().toString(16).slice(-6); 
+}
+// function set random colors to the squares
+function setRandomColors() {
+    document.querySelector('.color1').style.backgroundColor = getRandomColor();
+    document.querySelector('.color2').style.backgroundColor = getRandomColor();
+    document.querySelector('.color3').style.backgroundColor = getRandomColor();
+}
+// initlialize with random colors
+setRandomColors();
+// continue to change colors every 2 seconds
+setInterval(setRandomColors, 2000);
 // allow for selceting of images to trigger modal view
 const items = document.querySelectorAll('.item');
 items.forEach(item => {
