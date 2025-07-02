@@ -18,13 +18,14 @@ body {
   width: 200px;
   height: 200px;
   position: relative;
+  
 }
 .square {
   position: absolute;
   transform-origin: 50% 50%;
   animation-name: rotating;
   animation-iteration-count: infinite;
-  transition: backgrond-color 1.5s;
+  transition: background-color 1.5s;
 }
 @keyframes rotating {
   0% {
