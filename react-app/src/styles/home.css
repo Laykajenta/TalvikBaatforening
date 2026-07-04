@@ -1,0 +1,341 @@
+:root{
+   --letter-spacing-animation: 1em;
+   
+  
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: rgb(99, 66, 66);
+  background: linear-gradient(
+    90deg,
+    hsla(203, 90%, 92%, 1) 0%,
+    hsla(203, 89%, 71%, 1) 50%,
+    hsla(213, 88%, 42%, 1) 100%,
+    hsla(0, 0%, 96%, 1) 100%
+  );
+}
+
+main {
+  position: relative;
+}
+
+/* General */
+a {
+  color: #232227;
+  font-size: larger;
+}
+a:hover {
+  color: #ac5a24;
+}
+
+/* navigation */
+.menu-icon {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.menu-icon div {
+  height: 0.25rem;
+  background-color: rgb(47, 9, 201);
+  transition: all 0.3s ease-in-out;
+}
+
+/* rotere 1bar */
+.active .bar1 {
+  transform: translateY(0.6rem) rotate(-45deg);
+}
+
+/* fade out 2 bar */
+.active .bar2 {
+  opacity: 0;
+}
+
+/* rotate last bar */
+.active .bar3 {
+  transform: translateY(-0.75rem) rotate(45deg);
+}
+.nav-wrapper {
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    -90deg,
+    hsla(0, 0%, 96%, 1) 0%,
+    hsla(213, 88%, 42%, 1) 50%,
+    hsla(203, 89%, 71%, 1) 100%,
+    hsla(203, 90%, 92%, 1) 100%
+  );
+  width: 100%;
+  z-index: 10;
+}
+
+nav {
+  height: 100%;
+  color: hsla(213, 88%, 42%, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+  width: 100%;
+  z-index: 2;
+}
+nav ul {
+  list-style: none;
+   position: fixed;
+  top: -2,5vh;
+  left: 10px;
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-start; */
+  justify-content: space-evenly;
+  height: 85%;
+  font-size: 1.5rem;
+
+}
+nav li{
+
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+
+nav.active {
+  transform: translateX(0);
+}
+
+/* sections */
+section {
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+h2 {
+  font-size: 40px;
+}
+/* Header */
+.header {
+  position: absolute;
+  width: 100vw;
+}
+.header h1 {
+  font-size: clamp(60px,10vw,100px);
+  font-style: italic;
+
+  font-weight: 500;
+  text-align: center;
+  animation-name: focus-in-contract;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+}
+
+/* Annimering av overskrift */
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: var(--letter-spacing-animation);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    letter-spacing: 0;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.social-media-icons {
+  position: relative;
+  top: -60px;
+  text-align: center;
+}
+
+.fa {
+  padding: 20px;
+
+  font-size: 30px;
+  width: 30px;
+  text-decoration: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+.social-media-icons a {
+  animation: focus-in-contract 3s linear;
+  margin: 5px;
+}
+/* Add a hover effect if you want */
+.fa:hover {
+  /* opacity: 0.7; */
+  transform: scale(1.4);
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #09131b;
+  color: white;
+}
+/* Instagram */
+.fa-instagram {
+  background: #ee5555;
+  color: white;
+}
+
+/* section 2 stort bilde */
+.main-image {
+  height: 50%;
+  width: auto;
+  position: relative;
+  padding: 20px;
+  border: 10px solid rgb(99, 66, 66);
+  top: -25%;
+}
+
+#section-2 h2 {
+  margin-top: 50px;
+}
+/* section 3 Båtplasser */
+.batplass {
+  width: 100px;
+  padding: 10px;
+}
+
+/* section 4 galleri */
+.image-container {
+  position: relative;
+  top: -25%;
+  height: 48vh;
+}
+.small-image {
+  height: 50%;
+  width: auto;
+  padding: -1px;
+  border: 10px ridge hsla(203, 89%, 71%, 1);
+  border-radius: 20px;
+}
+
+.small-image:not(:first-child) {
+  margin-left: 20px;
+}
+
+/* section 5 kontakt */
+
+
+
+/* footer */
+.footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Media Queries---------- */
+
+/* Alle mobile enheter */
+
+@media screen and (max-width:1180px) {
+  :root {
+    --letter-spacing-animation:.1em;
+  }
+  nav{
+    width: 100%;
+    background:hsl(203, 63%, 81%);
+   
+    }
+  nav ul{
+    flex-direction: column;
+    position: relative;
+        
+  }
+  nav li{
+    text-align: center;
+  }
+  
+}
+/* Tablet HOrizontal */
+@media screen and (min-width:900px) and (max-width:1180px) {
+  .main-image{
+    height: auto;
+    width: 40%;
+    top: -3%;
+
+  }
+  
+}
+
+/* tablet vertikal */
+@media screen and (min-width:700px) and (max-width:900px) {
+  .main-image{
+    height: auto;
+    width: 70%;
+    top: -3%;
+
+  }
+  /* section 3 */
+  .small-image{
+    height: auto;
+    width: 60%;
+    margin: auto 5% !important; 
+    position: relative;
+    left: 12%;
+  }
+
+   
+}
+
+
+/* smartphone horisontal */
+@media screen and (min-width:600px) and (max-width:950px) {
+  nav ul {
+    font-size: 1.25rem;
+  }
+  .section-3 h2{
+    margin-top: 56px;
+  }
+  .small-image{
+    height: 70%;
+  }
+
+}
+
+/* smartphone vertical */
+@media screen and (max-width:600px) {
+  .main-image{
+    height: auto;
+    max-width: 85%;
+
+  }
+  .small-image{
+    height: auto;
+    width: 60%;
+    margin: auto 5% !important; 
+    position: relative;
+    left: 12%;
+  }
+
+}
